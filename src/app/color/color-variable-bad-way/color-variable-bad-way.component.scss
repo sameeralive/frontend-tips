@@ -2,17 +2,11 @@
 :host {
   /* colors */
   --clr-white: #ffffff;
-  --clr-surface: #F5F6FAFF;
+  --clr-surface: #ffffff;
   --clr-black: #000000;
-  --clr-blue-100: #0000FF;
-  --clr-blue-50: #0000FF80;
-  --clr-blue-25: #0000FF40;
-  --clr-red-100: #FF0000;
-  --clr-red-50: #FF000080;
-  --clr-red-25: #FF000040;
-  --clr-green-100: #00FF00;
-  --clr-green-50: #00FF0080;
-  --clr-green-25: #00FF0040;
+  --clr-dark-blue: #1F2F47;
+  --clr-blue: #0258BB;
+  --clr-blue-25: #0258BB40;
 
   /* font families */
   --ff-base: "IBM Plex Sans", sans-serif;
@@ -31,18 +25,15 @@
   --fs-700: 2.25rem;
 }
 
-body {
-  background: var(--clr-surface);
-  color: var(--clr-black);
-  font-family: var(--ff-base);
-  font-size: var(--fs-300);
+.plan-section {
+  background: var(--clr-dark-blue);
+  min-height: 100vh;
 }
-
-
 .page-title {
   font-family: var(--ff-accent);
   font-size: var(--fs-700);
   margin-block: 4rem 1.5rem;
+  color: var(--clr-white);
 }
 
 .subtitle {
@@ -50,10 +41,8 @@ body {
 }
 
 .button {
-  color: inherit;
   font-size: var(--fs-300);
   font-weight: var(--fw-bold);
-  background: var(--clr-green-25);
   padding: 1em 2em;
   border: 0;
   border-radius: 100vw;
@@ -61,10 +50,27 @@ body {
   box-shadow: 0 0.25rem 0 rgb(0 0 0 / 0.08);
 }
 
-.button:hover,
-.button:focus {
-  color: var(--clr-surface);
-  background: var(--clr-blue-50);
+.btn-primary {
+  color: var(--clr-white);
+  background: var(--clr-blue);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: var(--clr-white);
+  background: var(--clr-dark-blue);
+}
+
+
+.btn-secondary {
+  color: var(--clr-blue);
+  background: var(--clr-white);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: var(--clr-white);
+  background: var(--clr-dark-blue);
 }
 
 .wrapper {
@@ -97,7 +103,7 @@ body {
   background: var(--clr-white);
   padding: 2rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0 1rem rgb(0 0 0 / 0.122);
+  box-shadow: 0 0 1rem rgb(255 255 255 / 0.122)
 }
 
 .plan__icon {
@@ -123,35 +129,29 @@ body {
   margin-block-start: 2rem;
 }
 
-.plan::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  translate: -1.25rem -1.25rem;
-  border-radius: inherit;
+.plan--basic {
+  background-color: var(--clr-white);
+  color: var(--clr-blue);
 }
 
-.plan--basic::before {
-  background-color: var(--clr-red-25);
+.plan--professional {
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
 }
 
-.plan--professional::before {
-  background-color: var(--clr-green-25);
-}
-
-.plan--premium::before {
-  background-color: var(--clr-blue-25);
+.plan--premium {
+  background-color: var(--clr-white);
+  color: var(--clr-blue);
 }
 
 .plan--basic .plan__icon {
-  color: var(--clr-red-50);
+  color: var(--clr-blue);
 }
 
 .plan--professional .plan__icon {
-  color: var(--clr-green-50);
+  color: var(--clr-white);
 }
 
 .plan--premium .plan__icon {
-  color: var(--clr-blue-50);
+  color: var(--clr-blue);
 }
