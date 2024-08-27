@@ -1,3 +1,33 @@
+:host {
+  --clr-white: #ffffff;
+  --clr-surface: #F5F6FAFF;
+  --clr-text: #161433FF;
+
+  /* font families */
+  --ff-base: "IBM Plex Sans", sans-serif;
+  --ff-accent: "Young Serif", serif;
+
+  /* font weights */
+  --fw-regular: 500;
+  --fw-bold: 600;
+  --fw-black: 700;
+
+  /* font sizes */
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.25rem;
+}
+.theme {
+  --bg: var(--clr-surface);
+  --button-text: var(--clr-blue-75);
+  --button-text-hover: var(--clr-white);
+  --button-bg: var(--clr-surface);
+  --button-bg-hover: var(--clr-surface);
+}
+
+
 .page-title {
   font-family: var(--ff-accent);
   font-size: var(--fs-700);

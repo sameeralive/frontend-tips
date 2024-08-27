@@ -1,3 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+:host {
+  /* colors */
+  --clr-white: #ffffff;
+  --clr-surface: #F5F6FAFF;
+  --clr-black: #000000;
+  --clr-blue-100: #0000FF;
+  --clr-blue-50: #0000FF80;
+  --clr-blue-25: #0000FF40;
+  --clr-red-100: #FF0000;
+  --clr-red-50: #FF000080;
+  --clr-red-25: #FF000040;
+  --clr-green-100: #00FF00;
+  --clr-green-50: #00FF0080;
+  --clr-green-25: #00FF0040;
+
+  /* font families */
+  --ff-base: "IBM Plex Sans", sans-serif;
+  --ff-accent: "Young Serif", serif;
+
+  /* font weights */
+  --fw-regular: 500;
+  --fw-bold: 600;
+  --fw-black: 700;
+
+  /* font sizes */
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.25rem;
+}
+
+body {
+  background: var(--clr-surface);
+  color: var(--clr-black);
+  font-family: var(--ff-base);
+  font-size: var(--fs-300);
+}
+
+
 .page-title {
   font-family: var(--ff-accent);
   font-size: var(--fs-700);
@@ -52,7 +93,6 @@
 .plan {
   position: relative;
   display: grid;
-  justify-content: start;
   gap: 1rem;
   background: var(--clr-white);
   padding: 2rem;
