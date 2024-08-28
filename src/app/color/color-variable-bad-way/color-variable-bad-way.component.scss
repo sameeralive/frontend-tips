@@ -2,9 +2,8 @@
 :host {
   /* colors */
   --clr-white: #ffffff;
-  --clr-surface: #ffffff;
   --clr-black: #000000;
-  --clr-dark-blue: #1F2F47;
+  --clr-dark-blue: #013c7e;
   --clr-blue: #0258BB;
   --clr-blue-25: #0258BB40;
 
@@ -26,14 +25,15 @@
 }
 
 .plan-section {
-  background: var(--clr-dark-blue);
+  background: var(--clr-white);
   min-height: 100vh;
 }
 .page-title {
   font-family: var(--ff-accent);
   font-size: var(--fs-700);
   margin-block: 4rem 1.5rem;
-  color: var(--clr-white);
+  color: var(--clr-dark-blue);
+  font-weight: var(--fw-bold);
 }
 
 .subtitle {
@@ -43,7 +43,7 @@
 .button {
   font-size: var(--fs-300);
   font-weight: var(--fw-bold);
-  padding: 1em 2em;
+  padding: 1em 1em;
   border: 0;
   border-radius: 100vw;
   cursor: pointer;
@@ -99,11 +99,13 @@
 .plan {
   position: relative;
   display: grid;
+  text-align: center;
   gap: 1rem;
+  color: var(--clr-blue);
   background: var(--clr-white);
   padding: 2rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0 1rem rgb(255 255 255 / 0.122)
+  box-shadow: 0 0 0.5rem rgba(2, 88, 187, 0.3);
 }
 
 .plan__icon {
@@ -125,33 +127,7 @@
   font-weight: var(--fw-regular);
 }
 
-.plan > .button:last-child {
-  margin-block-start: 2rem;
-}
-
-.plan--basic {
-  background-color: var(--clr-white);
+.plan .plan__icon {
   color: var(--clr-blue);
 }
 
-.plan--professional {
-  background-color: var(--clr-blue);
-  color: var(--clr-white);
-}
-
-.plan--premium {
-  background-color: var(--clr-white);
-  color: var(--clr-blue);
-}
-
-.plan--basic .plan__icon {
-  color: var(--clr-blue);
-}
-
-.plan--professional .plan__icon {
-  color: var(--clr-white);
-}
-
-.plan--premium .plan__icon {
-  color: var(--clr-blue);
-}
