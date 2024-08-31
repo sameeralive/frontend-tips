@@ -1,0 +1,174 @@
+:host {
+  --primary-hue: 212;
+  --primary-saturation: 98%;
+  --primary-lightness: 37%;
+
+  --secondary-hue: 0;
+  --secondary-saturation: 0%;
+  --secondary-lightness: 100%;
+
+  --clr-primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
+  --clr-secondary: var(--secondary-hue) var(--secondary-saturation) var(--secondary-lightness);
+
+  --shadow: 2px 2px 5px hsl(var(--clr-primary)), -2px 2px 5px hsl(var(--clr-secondary));
+
+  /* font families */
+  --ff-base: "IBM Plex Sans", sans-serif;
+  --ff-accent: "Young Serif", serif;
+
+  /* font weights */
+  --fw-regular: 500;
+  --fw-bold: 600;
+  --fw-black: 700;
+
+  /* font sizes */
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.25rem;
+}
+
+.theme-light {
+  --shadow: 2px 2px 5px hsl(212 98% 37% / 0.25), -2px 2px 5px hsl(var(--clr-secondary));
+}
+
+.theme-dark {
+  --primary-hue: 212;
+  --primary-saturation: 40%;
+  --primary-lightness: 37%;
+
+  --secondary-hue: 212;
+  --secondary-saturation: 40%;
+  --secondary-lightness: 18%;
+
+  --shadow: 2px 2px 5px hsl(212 98% 37% / 0.25), -2px 2px 5px hsl(var(--clr-secondary));
+
+}
+
+.plan-section {
+  --primary-lightness: 98%;
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  min-height: 100vh;
+}
+
+.plan-section > * {
+  --primary-lightness: 37%;
+}
+
+.theme-dark .plan-section {
+  --primary-lightness: 10%;
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.theme-dark .plan-section > * {
+  --primary-lightness: 100%;
+}
+
+.page-title {
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / 25);
+  font-family: var(--ff-accent);
+  font-size: var(--fs-700);
+  margin-block: 4rem 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.theme-dark .page-title {
+  --primary-lightness: 100%;
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / 25);
+}
+
+.theme-dark .page-title > * {
+  --primary-lightness: 10%;
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.subtitle {
+  font-size: var(--fs-400);
+}
+
+.button {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  color: hsl(var(--secondary-hue) var(--secondary-saturation) var(--secondary-lightness));
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 100vw;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0 rgb(0 0 0 / 0.08);
+}
+
+.button:hover,
+.button:focus {
+  --primary-lightness: 25%;
+  color: hsl(var(--secondary-hue) var(--secondary-saturation) var(--secondary-lightness));
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.theme-dark .button:hover,
+.theme-dark .button:focus {
+  --primary-lightness: 60%;
+  --secondary-lightness: 100%;
+}
+
+.wrapper {
+  width: min(100% - 2rem, 55rem);
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 720px) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.pricing {
+  padding: 0;
+  margin-block: 3rem;
+  list-style: none;
+}
+
+.plan {
+  position: relative;
+  display: grid;
+  text-align: center;
+  gap: 1rem;
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  background: hsl(var(--secondary-hue) var(--secondary-saturation) var(--secondary-lightness));
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+//.plan--professional {
+//  --secondary-hue: 66;
+//  --secondary-saturation: 80%;
+//  --secondary-lightness: 50%;
+//}
+
+.plan__icon {
+  font-size: 2.5rem !important;
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.plan__title {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+}
+
+.plan__price {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-black);
+}
+
+.plan__price span {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-regular);
+}

@@ -6,6 +6,7 @@
   --clr-dark-blue: #013c7e;
   --clr-blue: #0258BB;
   --clr-blue-25: #0258BB40;
+  --clr-blue-5: #3C7DCE0D;
 
   /* font families */
   --ff-base: "IBM Plex Sans", sans-serif;
@@ -25,7 +26,7 @@
 }
 
 .plan-section {
-  background: var(--clr-white);
+  background: var(--clr-blue-5);
   min-height: 100vh;
 }
 .page-title {
@@ -105,7 +106,7 @@
   background: var(--clr-white);
   padding: 2rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0 0.5rem rgba(2, 88, 187, 0.3);
+  box-shadow: 2px 2px 5px var(--clr-blue-25), -2px 2px 5px var(--clr-white);
 }
 
 .plan__icon {
