@@ -3,25 +3,24 @@
     <div class="col">
       <form [formGroup]="parentForm" (ngSubmit)="submitData()">
         <div class="row">
-<!--          <div class="col-md-12 mb-3">-->
-<!--            <label class="form-label">Business Name</label>-->
-<!--            <input-->
-<!--              type="text"-->
-<!--              class="form-control"-->
-<!--              formControlName="companyName"-->
-<!--              id="companyName"-->
-<!--            />-->
-<!--          </div>-->
-<!--          <div class="col-md-12 mb-3">-->
-<!--            <label class="form-label">Nature of Business</label>-->
-<!--            <input-->
-<!--              type="text"-->
-<!--              class="form-control"-->
-<!--              formControlName="natureOfBusiness"-->
-<!--              id="natureOfBusiness"-->
-<!--            />-->
-<!--          </div>-->
-
+          <div class="col-md-12 mb-3">
+            <label class="form-label">Business Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="companyName"
+              id="companyName"
+            />
+          </div>
+          <div class="col-md-12 mb-3">
+            <label class="form-label">Nature of Business</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="natureOfBusiness"
+              id="natureOfBusiness"
+            />
+          </div>
           <app-child-form-1 [parentForm]="parentForm"></app-child-form-1>
         </div>
 

@@ -23,8 +23,8 @@ export class FormComponent implements OnInit{
 
   ngOnInit() {
     this.parentForm = this.fb.group({
-      // companyName: ['', Validators.required],
-      // natureOfBusiness: ['', Validators.required],
+      companyName: ['', Validators.required],
+      natureOfBusiness: ['', Validators.required],
     });
   }
 
