@@ -25,13 +25,15 @@ export class ChildForm1Component implements OnInit{
       lastName: ['', Validators.required],
     })
 
-    // this.parentForm.addControl('contact', this.contactForm);
-    this.parentForm = MergeControls(this.parentForm, this.contactForm);
+    this.parentForm.addControl('contact', this.contactForm);
+    // this.parentForm = MergeControls(this.parentForm, this.contactForm);
   }
 
 }
 
-
+/**
+ * merge form with parent form
+ * */
 export function MergeControls(parentForm: FormGroup, formToMerge: FormGroup) {
   Object.keys(formToMerge.controls).forEach((key) => {
     // Check if the control already exists in the parent form
