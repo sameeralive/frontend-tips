@@ -30,7 +30,8 @@
 }
 
 .theme-light {
-  --shadow: 2px 2px 5px hsl(212 98% 37% / 0.25), -2px 2px 5px hsl(var(--clr-secondary));
+  //--shadow: 2px 2px 5px hsl(var(--clr-primary) / 0.25), -2px 2px 5px hsl(var(--clr-secondary));
+  shadow: var(--shadow);
 }
 
 .theme-dark {

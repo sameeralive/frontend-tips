@@ -1,7 +1,7 @@
 :host {
-  --clr-white: hsl(0 0% 100%);
-  --clr-primry: hsl(212 98% 37%);
-  --clr-secondary: hsl(212 98% 25%);
+  --clr-primry: hsl(0 0% 100%);
+  --clr-secondary: hsl(212 98% 37%);
+  --clr-accent: hsl(212 98% 25%);
 
   /* font families */
   --ff-base: "IBM Plex Sans", sans-serif;
@@ -22,25 +22,25 @@
 
 .theme-light {
   --plan-bg: hsl(212 67% 98%);
-  --bg: var(--clr-white);
-  --icon: var(--clr-white);
-  --text-clr: var(--clr-primry);
-  --button-text: var(--clr-white);
-  --button-text-hover: var(--clr-white);
-  --button-bg: var(--clr-primry);
-  --button-bg-hover: var(--clr-secondary);
-  --shadow: 2px 2px 5px hsla(212 98% 37% / 0.25), -2px 2px 5px var(--clr-white);
+  --bg: var(--clr-primry);
+  --icon: var(--clr-secondary);
+  --text-clr: var(--clr-secondary);
+  --button-text: var(--clr-primry);
+  --button-text-hover: var(--clr-primry);
+  --button-bg: var(--clr-secondary);
+  --button-bg-hover: var(--clr-accent);
+  --shadow: 2px 2px 5px hsla(212 98% 37% / 0.25), -2px 2px 5px var(--clr-primry);
 }
 
 .theme-dark {
   --plan-bg: hsl(212 67% 10%);
-  --bg: var(--clr-secondary);
-  --icon: var(--clr-white);
-  --text-clr: var(--clr-white);
-  --button-text: var(--clr-white);
-  --button-text-hover: var(--clr-white);
-  --button-bg: var(--clr-primry);
-  --button-bg-hover: var(--clr-secondary);
+  --bg: var(--clr-accent);
+  --icon: var(--clr-primry);
+  --text-clr: var(--clr-primry);
+  --button-text: var(--clr-primry);
+  --button-text-hover: var(--clr-primry);
+  --button-bg: var(--clr-secondary);
+  --button-bg-hover: var(--clr-accent);
 }
 
 .plan-section {
@@ -49,7 +49,7 @@
 }
 
 .page-title {
-  color: var(--clr-secondary);
+  color: var(--clr-accent);
   font-family: var(--ff-accent);
   font-size: var(--fs-700);
   margin-block: 4rem 1.5rem;

@@ -21,7 +21,10 @@
               id="natureOfBusiness"
             />
           </div>
-          <app-child-form-1 [parentForm]="parentForm"></app-child-form-1>
+            <div class="col-md-12">
+                <app-child-form-1 [parentForm]="parentForm"></app-child-form-1>
+<!--                <app-child-form-2 [cFormGroup]="parentForm.get('contact')"></app-child-form-2>-->
+            </div>
         </div>
 
         <div class="row mt-4">
