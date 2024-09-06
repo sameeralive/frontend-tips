@@ -22,30 +22,31 @@ export class FormComponent implements OnInit{
     private el: ElementRef,
   ){}
 
-  /**
-   * with passing parent form
-   * */
-  ngOnInit() {
-    this.parentForm = this.fb.group({
-      companyName: ['', Validators.required],
-      natureOfBusiness: ['', Validators.required],
-    });
-  }
+  // /**
+  //  * with passing parent form
+  //  * */
+  // ngOnInit() {
+  //   this.parentForm = this.fb.group({
+  //     companyName: ['', Validators.required],
+  //     natureOfBusiness: ['', Validators.required],
+  //   });
+  // }
 
 
   /**
    * with passing specific form group
    * */
-  // ngOnInit() {
-  //   this.parentForm = this.fb.group({
-  //     companyName: ['', Validators.required],
-  //     natureOfBusiness: ['', Validators.required],
-  //     contact: this.fb.group({
-  //       firstName: ['', Validators.required],
-  //       lastName: ['', Validators.required],
-  //     })
-  //   });
-  // }
+  ngOnInit() {
+    this.parentForm = this.fb.group({
+      companyName: ['', Validators.required],
+      natureOfBusiness: ['', Validators.required],
+      contact: this.fb.group({
+        firstName: [''],
+        lastName: ['', Validators.required],
+      })
+    });
+  }
+
   submitData() {
     if (!this.parentForm.valid) {
       this.parentForm.markAllAsTouched();

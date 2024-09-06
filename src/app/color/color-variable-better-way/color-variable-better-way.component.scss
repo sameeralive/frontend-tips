@@ -47,6 +47,12 @@
 
 }
 
+.theme-nature {
+  --primary-hue: 123;
+  --secondary-hue: 80;
+  --shadow: 2px 2px 5px hsl(212 98% 37% / 0.25), -2px 2px 5px hsl(var(--clr-secondary));
+}
+
 .plan-section {
   --primary-lightness: 98%;
   background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
